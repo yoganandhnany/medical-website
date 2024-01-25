@@ -1,0 +1,62 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.hero-image {
+    height: 50vh; /* Adjust the height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-text h1 {
+    color: white;
+    font-size: 5em;
+    text-shadow: 2px 2px 4px #000000;
+    margin-bottom: 6em; /* Creates space between the two lines */
+}
+
+.hero-text h2 {
+    color: white;
+    font-size: 5em;
+    text-shadow: 2px 2px 4px #000000;
+    margin-bottom: 6em; /* Creates space between the two lines */
+
+    /* No need for bottom margin if there's no text after h2 */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.seminar {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+}
+
+.seminar-title {
+    margin-top: 0;
+}
+
+.seminar-description,
+.seminar-presented-by,
+.seminar-moderator,
+.seminar-date-time {
+    margin: 10px 0;
+    color: #333;
+}
+
+.pdf-viewer {
+    width: 100%;
+    height: 300px;
+    border: none;
+    margin-top: 15px;
+}
