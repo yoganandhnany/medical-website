@@ -9,7 +9,7 @@ freezer = Freezer(app)
 
 @app.route('/')
 def index():
-    ppt_folder = os.path.join(app.static_folder, 'PPTs')
+    ppt_folder = os.path.join(app.static_folder, 'ppts')
     ppt_files = [f for f in os.listdir(ppt_folder) if f.endswith('.pdf')]
     return render_template('index.html', ppts=ppt_files)
 
