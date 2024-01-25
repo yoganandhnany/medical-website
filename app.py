@@ -5,6 +5,7 @@ from flask import Flask, render_template
 from flask_frozen import Freezer
 
 app = Flask(__name__)
+app.config['FREEZER_RELATIVE_URLS'] = True
 freezer = Freezer(app)
 
 @app.route('/')
