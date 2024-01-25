@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical University Seminar Series</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="hero-image" style="background: url('{{ url_for('static', filename='images/doctors_pic1.jpg') }}') no-repeat center center; background-size: cover;">
+        <div class="hero-text">
+            <h1>University of California</h1>
+            <h2>Medical Seminar Series</h2>
+        </div>
+    </div>
+    <div class="container">
+        <section class="seminars">
+            {% for ppt in ppts %}
+                <article class="seminar">
+                    <h2 class="seminar-title">{{ ppt.split('.')[0] }}</h2>
+                    <p class="seminar-description">Description of the seminar goes here.</p>
+                    <p class="seminar-presented-by">Presented by: Presenter's Name</p>
+                    <p class="seminar-moderator">Moderator: Moderator's Name</p>
+                    <p class="seminar-date-time">Date: Date Here<br>Time: Time Here</p>
+                    <iframe src="{{ url_for('static', filename='PPTs/' ~ ppt) }}" class="pdf-viewer"></iframe>
+                </article>
+            {% endfor %}
+        </section>
+    </div>
+</body>
+</html>
